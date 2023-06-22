@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Circular-Std';
+    src: url(/fonts/CircularStd-Medium-35fe98b3364a6f493c36b7a8e9cd7f76fc2d36b861bf30b378105d875d1957a8.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+html,
+body {
+    font-family: 'Circular-Std';
+}
+
+h3 {
+    font-family: 'Circular-Std';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+}
+
+.slider-container {
+    position: relative;
+
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+    height: 714px;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.prev-btn,
+.next-btn {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.prev-btn[disabled],
+.next-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.buttons {
+    position: absolute;
+    z-index: 100;
+}
+
+
+
+/*toggle button css*/
+
+
+/* Middle */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    transform: translateY(5%);
+}
+
+
+p {
+    font-size: 90%;
+}
+
+
+
+label,
+.toggle {
+    height: 2.8rem;
+    border-radius: 100px;
+}
+
+label {
+    width: 327%;
+    background-color: #ffffffd9;
+    border-radius: 100px;
+    position: relative;
+    margin: 1.8rem 0 4rem 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.toggle {
+    position: absolute;
+    width: 50%;
+    background-color: #142640d9;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.names {
+    font-size: 90%;
+    font-weight: bolder;
+    width: 65%;
+    margin-left: 17.5%;
+    margin-top: .5%;
+
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+
+
+/* -------- Switch Styles ------------*/
+[type="checkbox"] {
+    display: none;
+}
+
+/* Toggle */
+[type="checkbox"]:checked+.app .toggle {
+    transform: translateX(90%);
+    background-color: #142640d9;
+    color: #fff;
+}
+
+
+
+
+.w-font {
+    color: #fff;
+    z-index: 1;
+}
+
+
+.prev-btn {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.next-btn {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.slider-container:hover+.prev-btn {
+    display: block;
+}
+
+.after {
+    display: block;
+}
+
+.before,
+.before2,
+.before3 {
+    display: none;
+}
+
+
+/*Media Queries*/
+@media (min-width: 320px) {
+    .container {
+        width: 300px;
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+    .prev-btn, .next-btn{
+        top:30%;
+    }
+    .buttons {
+        top: 49%;
+        left: 20%;       
+    }
+    label {
+        width: 277%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    .prev-btn, .next-btn {
+        top: 42%;
+    }
+    .buttons {
+        top: 73%;
+        left: 38%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    .slider{
+        height: 714px;
+    }
+
+}
+
+@media (min-width: 1260px) {
+    .container {
+        width: 1200px;
+    }
+    .buttons {       
+        top: 80%;
+        left: 40%;        
+    }
+}
