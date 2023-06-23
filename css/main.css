@@ -9,10 +9,10 @@
 html,
 body {
     font-family: 'Circular-Std';
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 h3 {
-    font-family: 'Circular-Std';
     font-size: 28px;
     font-weight: 700;
     line-height: 35px;
@@ -88,12 +88,9 @@ h3 {
     transform: translateY(5%);
 }
 
-
 p {
     font-size: 90%;
 }
-
-
 
 label,
 .toggle {
@@ -202,13 +199,17 @@ label {
     h3 {
         font-size: 18px;
     }
-    .prev-btn, .next-btn{
-        top:30%;
+
+    .prev-btn,
+    .next-btn {
+        top: 30%;
     }
+
     .buttons {
         top: 49%;
-        left: 20%;       
+        left: 20%;
     }
+
     label {
         width: 277%;
     }
@@ -218,12 +219,19 @@ label {
     .container {
         width: 750px;
     }
-    .prev-btn, .next-btn {
+
+    .prev-btn,
+    .next-btn {
         top: 42%;
     }
+
     .buttons {
         top: 73%;
         left: 38%;
+    }
+
+    h3 {
+        font-size: 28px;
     }
 }
 
@@ -231,7 +239,8 @@ label {
     .container {
         width: 970px;
     }
-    .slider{
+
+    .slider {
         height: 714px;
     }
 
@@ -241,8 +250,9 @@ label {
     .container {
         width: 1200px;
     }
-    .buttons {       
+
+    .buttons {
         top: 80%;
-        left: 40%;        
+        left: 40%;
     }
 }

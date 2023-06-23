@@ -22,32 +22,8 @@ $(document).ready(function () {
         // Update buttons based on current slide index
         updateButtons();
     });
-    $("#slide1a").click(function () {
-        console.log("1st slide After");
-
-    })
-
-    $("#switch1").click(function () {
-        $("#slide1b").toggleClass("w-font");
-        $("#slide1a").toggleClass("w-font");
-        $(".after").toggle();
-        $(".before").toggle();
-    })
-
-    $("#switch2").click(function () {
-        $("#slide2b").toggleClass("w-font");
-        $("#slide2a").toggleClass("w-font");
-        $(".after2").toggle();
-        $(".before2").toggle();
-    })
-
-    $("#switch3").click(function () {
-        $("#slide3b").toggleClass("w-font");
-        $("#slide3a").toggleClass("w-font");
-        $(".after3").toggle();
-        $(".before3").toggle();
-    })
-    // Handle previous button click
+    
+     // Handle previous button click
     $('.prev-btn').on('click', function () {
         // Hide current slide
         $('.slide#slide' + currentSlide).hide();
@@ -78,4 +54,27 @@ $(document).ready(function () {
             $('.next-btn').prop('disabled', false);
         }
     }
+
+    //Toggle button function
+
+    $("#switch1").on('click',function () {
+        $("#slide1b").toggleClass("w-font");
+        $("#slide1a").toggleClass("w-font");
+        $(".after").toggle();
+        $(".before").toggle();
+    })
+
+    $("#switch2").on('click',function () {
+        $("#slide2b").toggleClass("w-font");
+        $("#slide2a").toggleClass("w-font");
+        $(".after2").toggle();
+        $(".before2").toggle();
+    })
+
+    $("#switch3").on('click',function () {
+        $("#slide3b").toggleClass("w-font");
+        $("#slide3a").toggleClass("w-font");
+        $(".after3").toggle();
+        $(".before3").toggle();
+    })
 });
